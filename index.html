@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poultry Produce Platform :by CateHenu</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home" onclick="toggleContent('home')">Home</a></li>
+                <li><a href="#benefits" onclick="toggleContent('benefits')">Benefits</a></li>
+                <li><a href="#purchase" onclick="toggleContent('purchase')">Purchase</a></li>
+                <li><a href="#recommendations" onclick="toggleContent('recommendations')">Recommendations</a></li>
+                <li><a href="#contact" onclick="toggleContent('contact')">Contact</a></li>
+                <li><a href="#profile" id="profile-link" onclick="toggleContent('profile')">Profile</a></li>
+                <li><a href="#challenges" onclick="toggleContent('challenges')">Challenges</a></li>
+                <li><a href="#cart" id="cart-link" onclick="toggleContent('cart')">🛒</a></li> <!-- Cart icon added -->
+            </ul>
+            <input type="text" id="search-bar" placeholder="Search..." />
+        </nav>
+    </header>
+   <!-- Other sections remain unchanged -->
+    <section id="profile" class="visible">
+        <h2>profile</h2>
+        <div id="profile-info">
+            <p><strong>Name:</strong> <span id="profile-name">CateHenu</span></p>
+            <p><strong>Email:</strong> <span id="profile-email">henucatherine@example.com</span></p>
+        </div>
+        <button onclick="openProfileEdit()">Edit Profile</button>
+    </section>
+    <section id="cart" class="hidden">
+        <h2>Your Cart</h2>
+        <div id="cart-items">
+            <!-- Items added to cart will be displayed here -->
+        </div>
+    </section>
+    <button onclick="checkout()">Checkout</button>
+    <section id="add-product" class="hidden">
+        <h2>Add New Poultry Produce</h2>
+        <form id="add-product-form" onsubmit="addProduct(event)">
+            <label for="product-name">Product Name:</label>
+            <input type="text" id="product-name" required />
+    
+            <label for="product-price">Price:</label>
+            <input type="number" id="product-price" required />
+    
+            <label for="product-image">Image URL:</label>
+            <input type="url" id="product-image" required />
+    
+            <button type="submit">Add Product</button>
+        </form>
+    </section>
+    <section id="home" class="visible">
+        <h1>POULTRY PRODUCE </h1>
+        <p>The Poultry Produce Platform aims to support poultry farmers in adopting eco-friendly practices and improving their operations.</p>
+    </section>
+    <section id="benefits" class="hidden">
+        <h2>Benefits of Poultry Produce</h2>
+        <ul>
+            <li>High in protein</li>
+            <li>Rich in essential vitamins and minerals</li>
+            <li>Supports local farmers and eco-friendly practices</li>
+        </ul>
+    </section>
+    <section id="purchase" class="visible">
+        <h2>Purchase Poultry Produce</h2>
+        <p>Find a variety of poultry products available for purchase.</p>
+        <div id="produce-list"></div>
+    </section>
+    <section id="add-product" class="visible">
+        <h2>Add New Poultry Produce</h2>
+        <form id="add-product-form">
+            <label for="product-name">Product Name:</label>
+            <input type="text" id="product-name" required />
+    
+            <label for="product-price">Price:</label>
+            <input type="number" id="product-price" required />
+    
+            <label for="product-image">Image URL:</label>
+            <input type="url" id="product-image" required />
+    
+            <button type="submit">Add Product</button>
+        </form>
+    </section>
+    <section id="recommendations" class="hidden">
+        <h2>Recommendations</h2>
+        <p>Explore our top picks for healthy poultry products.</p>
+        <div id="recommendation-list"></div>
+    </section>
+    <section id="challenges" class="hidden">
+        <h2>Challenges Faced in Poultry Farming</h2>
+        <ul>
+            <li>Rising Feed Costs: Fluctuations in feed prices can significantly impact profit margins.</li>
+            <li>Health Issues: Poultry farmers must constantly manage health risks such as diseases and infections.</li>
+            <li>Regulatory Compliance: Navigating regulations and standards can be complex and time-consuming.</li>
+            <li>Market Access: Farmers often face challenges in accessing larger markets for their products.</li>
+            <li>Climate Change: Variability in weather can affect poultry production and sustainability.</li>
+        </ul>
+    </section>
+    <section id="future-plans" class="hidden">
+        <h2>Future Plans</h2>
+        <ul>
+            <li>Mobile Application: Develop a mobile app to enhance accessibility and engagement for farmers on the go.</li>
+            <li>Educational Webinars: Host live sessions with experts on topics like organic feed and poultry health management.</li>
+            <li>Collaboration with Agricultural Experts: Partner with universities and agricultural organizations to provide up-to-date research and resources.</li>
+            <li>Advanced Analytics: Integrate tools for farmers to track their poultry farming metrics and improve operational efficiency.</li>
+            <li>Expansion of Marketplace: Increase the variety of products and services offered, including poultry equipment and health services.</li>
+        </ul>
+    </section>
+    <section id="contact" class="hidden">
+        <h2>Contact Us</h2>
+        <p>Email: info@poultryproduce.com</p>
+        <p>Follow us on:</p>
+        <ul>
+            <li><a href="https://facebook.com">Facebook</a></li>
+            <li><a href="https://twitter.com">Twitter</a></li>
+            <li><a href="https://instagram.com">Instagram</a></li>
+        </ul>
+    </section>
+    <footer>
+        <div id="footer-contact">
+            <span>Email: info@poultryproduce.com</span>
+            <span><a href="https://facebook.com">Facebook</a></span>
+            <span><a href="https://twitter.com">Twitter</a></span>
+            <span><a href="https://instagram.com">Instagram</a></span>
+        </div>
+    </footer>
+<script src="./index.js"></script>
+</body>
+</body>
+</html>
