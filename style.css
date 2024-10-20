@@ -67,25 +67,26 @@ section {
     flex-wrap: wrap;
     justify-content: space-between;
 }
-
-.product-item {
-    border: 1px solid #332929;
-    padding: 5px;
-    border-radius: 1%;
-    background-color: #020202;
-    width: 200px;
+.product {
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
 }
 
-.product-item img {
-    width: 60%;
-    height:auto;
+.product img {
+    max-width: 100%;
+    height: auto;
 }
+
+
+
 
 .product-item button {
     padding: 2px;
     margin-top: 30px;
-    background-color: #b6d44a;
-    color: rgb(107, 68, 68);
+    background-color: #212220;
+    color: rgb(58, 51, 51);
     border: none;
     border-radius: 30px;
     cursor: pointer;
@@ -174,3 +175,37 @@ body {
     border: none;
     color: white;
 }
+/* General button styles */
+button {
+    background-color: #343a34; /* Green background */
+    color: white; /* White text */
+    padding: 10px 15px; /* Padding around text */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Text size */
+    margin: 5px; /* Space between buttons */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Style for product items */
+.product-item {
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 15px; /* Padding inside product item */
+    margin: 10px; /* Space between product items */
+    text-align: center; /* Center text */
+}
+
+/* Image styling */
+.product-item img {
+    max-width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Rounded corners */
+}
+

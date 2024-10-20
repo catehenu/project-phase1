@@ -38,25 +38,13 @@
         </div>
     </section>
     <button onclick="checkout()">Checkout</button>
-    <section id="add-product" class="hidden">
-        <h2>Add New Poultry Produce</h2>
-        <form id="add-product-form" onsubmit="addProduct(event)">
-            <label for="product-name">Product Name:</label>
-            <input type="text" id="product-name" required />
-    
-            <label for="product-price">Price:</label>
-            <input type="number" id="product-price" required />
-    
-            <label for="product-image">Image URL:</label>
-            <input type="url" id="product-image" required />
-    
-            <button type="submit">Add Product</button>
-        </form>
     </section>
-    <section id="home" class="visible">
-        <h1>POULTRY PRODUCE </h1>
-        <p>The Poultry Produce Platform aims to support poultry farmers in adopting eco-friendly practices and improving their operations.</p>
+    <section id="purchase" class="visible">
+        <h2>Purchase Poultry Produce</h2>
+        <p>Find a variety of poultry products available for purchase.</p>
+        <div id="produce-list"></div>
     </section>
+    
     <section id="benefits" class="hidden">
         <h2>Benefits of Poultry Produce</h2>
         <ul>
@@ -65,14 +53,10 @@
             <li>Supports local farmers and eco-friendly practices</li>
         </ul>
     </section>
-    <section id="purchase" class="visible">
-        <h2>Purchase Poultry Produce</h2>
-        <p>Find a variety of poultry products available for purchase.</p>
-        <div id="produce-list"></div>
-    </section>
+    
     <section id="add-product" class="visible">
         <h2>Add New Poultry Produce</h2>
-        <form id="add-product-form">
+        <form id="add-product-form" onsubmit="event.preventDefault(); addProduct();">
             <label for="product-name">Product Name:</label>
             <input type="text" id="product-name" required />
     
@@ -85,6 +69,7 @@
             <button type="submit">Add Product</button>
         </form>
     </section>
+    
     <section id="recommendations" class="hidden">
         <h2>Recommendations</h2>
         <p>Explore our top picks for healthy poultry products.</p>
